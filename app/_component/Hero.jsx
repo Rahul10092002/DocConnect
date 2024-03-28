@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
-import React from 'react'
+import { Button } from "@/components/ui/button";
+import React from "react";
 
 function Hero() {
   return (
@@ -15,9 +15,9 @@ function Hero() {
           </div>
 
           <div className="lg:py-24">
-            <h2 className="text-3xl font-bold sm:text-4xl">
+            <h2 className="text-3xl font-bold sm:text-4xl tracking-wide">
               Effortlessly <span className="text-primary">Schedule</span> Your
-              Next <span className='text-primary'>Doctor</span> Visit
+              Next <span className="text-primary">Doctor</span> Visit
             </h2>
 
             <p className="mt-4 text-gray-600">
@@ -27,7 +27,7 @@ function Hero() {
               repellat.
             </p>
 
-           <Button className="mt-10">Explore Now</Button>
+            <Button className="mt-10">Explore Now</Button>
           </div>
         </div>
       </div>
@@ -35,4 +35,4 @@ function Hero() {
   );
 }
 
-export default Hero
+export default Hero;
