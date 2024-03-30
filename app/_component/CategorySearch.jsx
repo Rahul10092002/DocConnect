@@ -45,7 +45,7 @@ function CategorySearch() {
                 (item, index) =>
                   index < 6 && (
                     <Link href={"/search/"+item.attributes.Name}
-                      key={index}
+                      key={item.id}
                       className="flex flex-col text-center gap-2 items-center p-5 m-2 rounded-lg bg-blue-50 hover:scale-110 transition-all ease-in-out mt-5"
                     >
                       <Image

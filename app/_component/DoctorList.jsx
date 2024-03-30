@@ -1,15 +1,19 @@
 import Image from "next/image";
 import React from "react";
 
-function DoctorList({ doctorList }) {
+function DoctorList({
+  doctorList,
+  heading = "Popular Doctors",
+  categorygrid = "lg:grid-cols-4",
+}) {
   return (
     <div className="mb-10 px-8">
-      <h2 className="font-bold text-xl">Popular Doctors</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 mt-4">
+      <h2 className="font-bold text-xl">{heading}</h2>
+      <div className={` grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-7 mt-4 ${categorygrid}`}>
         {doctorList.length > 0
           ? doctorList.map((item, index) => (
               <div
-                key={index}
+                key={item.id}
                 className="border-[1px] rounded-lg p-3 cursor-pointer hover:border-primary hover:shadow-sm transition-all ease-in-out"
               >
                 <Image
