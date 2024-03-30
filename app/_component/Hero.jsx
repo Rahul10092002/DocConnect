@@ -21,10 +21,19 @@ function Hero() {
             </h2>
 
             <p className="mt-4 text-gray-600">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui
-              hic atque tenetur quis eius quos ea neque sunt, accusantium soluta
-              minus veniam tempora deserunt? Molestiae eius quidem quam
-              repellat.
+              Discover a simpler, more efficient way to manage your healthcare
+              with our doctor appointment booking platform. Here, we connect you
+              with a wide network of healthcare professionals across various
+              specialties, enabling you to find the right doctor for your needs
+              at the click of a button. Our platform is designed with your
+              convenience and peace of mind at its core, offering user-friendly
+              scheduling, timely reminders, and all the information you need to
+              make informed health decisions. Whether you're seeking a general
+              practitioner, a specialist for a specific condition, or a
+              consultation for wellness and prevention, our goal is to make
+              accessing top-tier medical care as easy and seamless as possible.
+              Take the first step towards better health and well-being by
+              exploring our services today.
             </p>
 
             <Button className="mt-10">Explore Now</Button>

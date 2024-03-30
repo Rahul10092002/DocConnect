@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import GlobalApi from "@/utils/GlobalApi";
 import { Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function CategorySearch() {
@@ -39,23 +40,29 @@ function CategorySearch() {
       <div>
         {/* Display category */}
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {CategoryList.map(
-            (item, index) =>
-              index < 6 && (
-                <div
-                  key={index}
-                  className="flex flex-col text-center gap-2 items-center p-5 m-2 rounded-lg bg-blue-50 hover:scale-110 transition-all ease-in-out mt-5"
-                >
-                  <Image
-                    src={item?.attributes?.Icon?.data?.attributes?.url}
-                    alt="icon"
-                    width={40}
-                    height={40}
-                  />
-                  <label className="text-blue-600 text-sm">{item?.attributes?.Name}</label>
-                </div>
+          {CategoryList.length > 0
+            ? CategoryList.map(
+                (item, index) =>
+                  index < 6 && (
+                    <Link href={"/search/"+item.attributes.Name}
+                      key={index}
+                      className="flex flex-col text-center gap-2 items-center p-5 m-2 rounded-lg bg-blue-50 hover:scale-110 transition-all ease-in-out mt-5"
+                    >
+                      <Image
+                        src={item?.attributes?.Icon?.data?.attributes?.url}
+                        alt="icon"
+                        width={40}
+                        height={40}
+                      />
+                      <label className="text-blue-600 text-sm">
+                        {item?.attributes?.Name}
+                      </label>
+                    </Link>
+                  )
               )
-          )}
+            : [1, 2, 3, 4, 5, 6].map((item, index) => (
+                <div className="h-[120px] m-2 w-[100px]  bg-slate-200 animate-pulse rounded-lg "></div>
+              ))}
         </div>
       </div>
     </div>

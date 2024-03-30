@@ -5,12 +5,12 @@ function Footer() {
   return (
     <footer className="bg-gray-100">
       <div className="mx-auto max-w-5xl px-4 justify-center  flex flex-col items-center text-center py-16 sm:px-6 lg:px-8">
-              <Image src="/logo.svg" alt='logo'
-              width={200} height={100}/>
+        <Image src="/logo.svg" alt="logo" width={200} height={100} />
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-          consequuntur amet culpa cum itaque neque.
+          Welcome to DoctorConnect - your trusted platform for booking doctor
+          appointments. We're committed to making healthcare accessible and
+          convenient for everyone.
         </p>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
