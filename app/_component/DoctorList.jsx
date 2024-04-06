@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function DoctorList({
@@ -9,7 +10,9 @@ function DoctorList({
   return (
     <div className="mb-10 px-8">
       <h2 className="font-bold text-xl">{heading}</h2>
-      <div className={` grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-7 mt-4 ${categorygrid}`}>
+      <div
+        className={` grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3  gap-7 mt-4 ${categorygrid}`}
+      >
         {doctorList.length > 0
           ? doctorList.map((item, index) => (
               <div
@@ -34,9 +37,11 @@ function DoctorList({
                   <h2 className="text-gray-500 text-sm">
                     {item.attributes.Address}
                   </h2>
-                  <h2 className="p-2 px-3 border-[1px] text-primary rounded-full w-full text-center text=[11px] mt-2 cursor-pointer hover:bg-primary hover:text-white transition-all ease-in-out">
-                    Book Now
-                  </h2>
+                  <Link className="w-full" href={"/details/"+item?.id}>
+                    <h2 className="p-2 px-3 border-[1px] text-primary rounded-full w-full text-center text=[11px] mt-2 cursor-pointer hover:bg-primary hover:text-white transition-all ease-in-out">
+                      Book Now
+                    </h2>
+                  </Link>
                 </div>
               </div>
             ))

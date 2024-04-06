@@ -17,8 +17,14 @@ const getDoctorByCategory = (category) =>
   axiosClient.get(
     "/doctors?filters[categories][Name][$in]=" + category + "&populate=*"
   );
+
+const getDoctorDetails=(id)=>axiosClient.get('/doctors/'+id+"?populate=*")
+
+const BookAppointment=(data)=>axiosClient.post('/appointments',data)
 export default {
   getCategory,
   getDoctorList,
   getDoctorByCategory,
+  getDoctorDetails,
+  BookAppointment
 };
