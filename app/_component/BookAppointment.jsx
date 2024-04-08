@@ -43,6 +43,9 @@ function BookAppointment({ doctor }) {
     GlobalApi.BookAppointment(data).then((res) => {
       console.log(res);
       if (res) {
+        GlobalApi.sendEmail(res).then((resp) => {
+          console.log(resp);
+        })
         toast("Booking details has been sent to Email");
       }
     });
@@ -128,7 +131,7 @@ function BookAppointment({ doctor }) {
               rows="4"
               className="w-full px-0 text-sm text-gray-900 bg-white border-2 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
               placeholder="Write a Note..."
-              required
+              
             />
           </DialogDescription>
         </DialogHeader>

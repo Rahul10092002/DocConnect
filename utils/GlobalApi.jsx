@@ -20,11 +20,14 @@ const getDoctorByCategory = (category) =>
 
 const getDoctorDetails=(id)=>axiosClient.get('/doctors/'+id+"?populate=*")
 
-const BookAppointment=(data)=>axiosClient.post('/appointments',data)
+const BookAppointment = (data) => axiosClient.post('/appointments', data)
+
+const sendEmail=(data)=>axios.post('/api/sendEmail',data)
 export default {
   getCategory,
   getDoctorList,
   getDoctorByCategory,
   getDoctorDetails,
-  BookAppointment
+  BookAppointment,
+  sendEmail
 };
