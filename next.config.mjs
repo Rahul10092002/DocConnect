@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["res.cloudinary.com", "lh3.googleusercontent.com"],
+    domains: [
+      "res.cloudinary.com",
+      "lh3.googleusercontent.com",
+      "https://resend.com/domains",
+    ],
   },
 };
 

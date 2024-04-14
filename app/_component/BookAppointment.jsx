@@ -33,7 +33,7 @@ function BookAppointment({ doctor }) {
     const data = {
       data: {
         UserName: user.given_name + " " + user.family_name,
-        Email: user.email,
+        Email: user?.email,
         Time: selectedTimeslot,
         Date: date,
         doctor: doctor.id,
